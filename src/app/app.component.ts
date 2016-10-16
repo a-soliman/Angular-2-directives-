@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HighlightDirective } from './highlight.directive';
 
 @Component({
   selector: 'dir-root',
@@ -14,9 +15,11 @@ import { Component } from '@angular/core';
 		width: 100px;
 		height: 100px;
 	}
-
-  	`]
+  `]
 })
 export class AppComponent {
-
+	private switch = true;
+	onSwitch() {
+		this.switch = !this.switch;
+	}
 }
